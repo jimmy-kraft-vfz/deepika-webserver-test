@@ -16,36 +16,38 @@
 3- Container can be pulled from docker hub with: “docker pull <Candidate-Webserver-Test>”
 4- Container has to run on an on your own docker installation
 ```
-```
-Web Server and Webpage:
-Write a simple web application or use an existing one that displays a basic webpage. The content contains a "Hello, DevOps!" message.
-Choose a web server (e.g., Nginx, Apache) to serve the webpage.
-Docker Containerization:
-Create a Dockerfile to containerize the web server and the webpage.
-Ensure that the Dockerfile is efficient and follows best practices.
-Container Registry:
-Publish the Docker image to a container registry of your choice (e.g., Docker Hub, GitHub Container Registry).
-CI/CD Pipeline:
-Set up a CI/CD pipeline using a CI/CD tool (e.g., GitHub Actions, GitLab CI, Jenkins).
-Configure the pipeline to trigger on each commit to the main branch.
-Include stages for building the Docker image and pushing it to the container registry.
-```
+
+<B>Web Server and Webpage:</B>
 
 ```
+1-Write a simple web application or use an existing one that displays a basic webpage. The content contains a "Hello, DevOps!" message.
+Choose a web server (e.g., Nginx, Apache) to serve the webpage.
+2-Docker Containerization:
+3-Create a Dockerfile to containerize the web server and the webpage.
+4-Ensure that the Dockerfile is efficient and follows best practices.
+5-Container Registry:
+6-Publish the Docker image to a container registry of your choice (e.g., Docker Hub, GitHub Container Registry).
+7-CI/CD Pipeline:
+8-Set up a CI/CD pipeline using a CI/CD tool (e.g., GitHub Actions, GitLab CI, Jenkins).
+9-Configure the pipeline to trigger on each commit to the main branch.
+10-Include stages for building the Docker image and pushing it to the container registry.
+```
 <B>Local Deployment:</B>
-Document the steps to deploy the Docker container onna local instance of Docker.
-Include any necessary configurations or environment variables.
 ```
+1-Document the steps to deploy the Docker container onna local instance of Docker.
+2-Include any necessary configurations or environment variables.
 ```
+
 <B>Run and Verify:</B>
-Provide instructions on how to run the container locally.
-Verify that the webpage is accessible by navigating to the appropriate URL.
 ```
+1-Provide instructions on how to run the container locally.
+2-Verify that the webpage is accessible by navigating to the appropriate URL.
 ```
 <B>Documentation:</B>
-Write clear documentation that includes:
-Instructions for building the Docker image locally.
-Details on setting up the CI/CD pipeline.
-Steps for deploying and running the container on a local Docker instance.
-Any additional considerations or configurations.
+```
+1-Write clear documentation that includes:
+2-Instructions for building the Docker image locally.
+3-Details on setting up the CI/CD pipeline.
+4-Steps for deploying and running the container on a local Docker instance.
+5-Any additional considerations or configurations.
 ```
