@@ -5,9 +5,9 @@ naas-devops-webapp/
 └── app/
     └── index.html     # Web page served by Nginx
 
-Prerequisites :
+<B>Prerequisites</B> :
 
-<B>Docker</B> :
+Docker :
  installed on your system.
 
 <B>A Docker Hub account</B> (https://github.com/)
