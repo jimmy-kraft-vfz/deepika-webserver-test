@@ -1,4 +1,4 @@
-Project structure : 
+<B>Project structure</B> : 
 
 naas-devops-webapp/
 ├── Dockerfile         # Docker build file
@@ -10,9 +10,9 @@ Prerequisites :
 <B>Docker</B> :
  installed on your system.
 
-A Docker Hub account (https://github.com/)
+<B>A Docker Hub account</B> (https://github.com/)
 
-Build the Docker Image 
+<B>Build the Docker Image </B>
 
 Command :  docker build -t naas-devops-webapp:latest .
 
@@ -22,7 +22,7 @@ Run the Container
 
 command : docker run -d -p 8080:80 --name naas-devops-webapp naas-devops-webapp:latest (Start the container and map port 8080)
 
-Open browser and go to:
+<B>Open browser and go to:</B>
 
 http://localhost:8080
 
