@@ -4,13 +4,14 @@ Simple Flask webserver that displays "Hello DevOps NaaS &lt;NAME&gt; + &lt;DATE&
 
 <B>Project structure</B> : 
 
+```
 naas-vfg-solution/
 ├── Dockerfile # Docker build file
 ├── app.py # Main application
 ├── test_app.py # Test script
 ├── requirements.txt # Python dependencies
 └── docker-compose.yml # Docker Compose config
-
+```
     
 <B>Prerequisites</B> :
 
