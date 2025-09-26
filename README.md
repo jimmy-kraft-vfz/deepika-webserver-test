@@ -46,8 +46,8 @@ Choose a web server (e.g., Nginx, Apache) to serve the webpage.
 <B>Documentation:</B>
 ```
 1-Write clear documentation that includes:
-2-Instructions for building the Docker image locally.
-3-Details on setting up the CI/CD pipeline.
-4-Steps for deploying and running the container on a local Docker instance.
-5-Any additional considerations or configurations.
+   a-Instructions for building the Docker image locally.
+   b-Details on setting up the CI/CD pipeline.
+   c-Steps for deploying and running the container on a local Docker instance.
+   d-Any additional considerations or configurations.
 ```
