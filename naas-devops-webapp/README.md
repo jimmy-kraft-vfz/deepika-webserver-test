@@ -7,7 +7,7 @@ naas-devops-webapp/
 
 Prerequisites :
 
-Docker :
+<B>Docker</B> :
  installed on your system.
 
 A Docker Hub account (https://github.com/)
