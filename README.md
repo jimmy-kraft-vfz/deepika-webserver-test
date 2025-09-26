@@ -10,11 +10,13 @@
 6- Drive innovation inside NaaS on the infrastructure level
 ```
 
-Build a dockerized web server that displays a simple webpage. Document the steps and configurations.
-A webpage that shows: “Hello DevOps NaaS <Name of yourself> + date of that day”
-Container can be pulled from docker hub with: “docker pull <Candidate-Webserver-Test>”
-Container has to run on an on your own docker installation
-
+```
+1- Build a dockerized web server that displays a simple webpage. Document the steps and configurations.
+2- A webpage that shows: “Hello DevOps NaaS <Name of yourself> + date of that day”
+3- Container can be pulled from docker hub with: “docker pull <Candidate-Webserver-Test>”
+4- Container has to run on an on your own docker installation
+```
+```
 Web Server and Webpage:
 Write a simple web application or use an existing one that displays a basic webpage. The content contains a "Hello, DevOps!" message.
 Choose a web server (e.g., Nginx, Apache) to serve the webpage.
@@ -27,16 +29,23 @@ CI/CD Pipeline:
 Set up a CI/CD pipeline using a CI/CD tool (e.g., GitHub Actions, GitLab CI, Jenkins).
 Configure the pipeline to trigger on each commit to the main branch.
 Include stages for building the Docker image and pushing it to the container registry.
+```
 
-Local Deployment:
+```
+<B>Local Deployment:</B>
 Document the steps to deploy the Docker container onna local instance of Docker.
 Include any necessary configurations or environment variables.
-Run and Verify:
+```
+```
+<B>Run and Verify:</B>
 Provide instructions on how to run the container locally.
 Verify that the webpage is accessible by navigating to the appropriate URL.
-Documentation:
+```
+```
+<B>Documentation:</B>
 Write clear documentation that includes:
 Instructions for building the Docker image locally.
 Details on setting up the CI/CD pipeline.
 Steps for deploying and running the container on a local Docker instance.
 Any additional considerations or configurations.
+```
