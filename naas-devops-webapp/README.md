@@ -15,11 +15,11 @@ Docker :
 
 <B>Build the Docker Image</B>
 
-Command :  <B> docker build -t naas-devops-webapp:latest . </B>
+Command :  <B> locla :</B> docker build -t naas-devops-webapp:latest . </B>
 
-<B>SIT env : docker build -t naas-devops-webapp:sit .</B>
+<B>SIT env :</B> docker build -t naas-devops-webapp:sit .
 
-<B>UAT env : docker build -t naas-devops-webapp:uat . </B>
+<B>UAT env :</B> docker build -t naas-devops-webapp:uat .
 
 Run the Container
 
