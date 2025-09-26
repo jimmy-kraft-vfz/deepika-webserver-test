@@ -1,15 +1,16 @@
-# Candidate Webserver Test
+# Candidate Webserver Test(Deepika Gupta)
 
 Simple Flask webserver that displays "Hello DevOps NaaS &lt;NAME&gt; + &lt;DATE&gt;".
 
 <B>Project structure</B> : 
 
 naas-vfg-solution/
-├── Dockerfile         # Docker build file
-└── app.py
-└── test_app.py
-└── requirements.txt
-└──docker-compose.yml
+├── Dockerfile # Docker build file
+├── app.py # Main application
+├── test_app.py # Test script
+├── requirements.txt # Python dependencies
+└── docker-compose.yml # Docker Compose config
+
     
 <B>Prerequisites</B> :
 
