@@ -15,10 +15,12 @@ Docker :
 
 <B>Build the Docker Image</B>
 
-Command :  docker build -t naas-devops-webapp:latest .
+Command :  <B> docker build -t naas-devops-webapp:latest . </B>
 
-SIT env : docker build -t naas-devops-webapp:sit .
-UAT env : docker build -t naas-devops-webapp:uat .
+<B>SIT env : docker build -t naas-devops-webapp:sit .</B>
+
+<B>UAT env : docker build -t naas-devops-webapp:uat . </B>
+
 Run the Container
 
 command : docker run -d -p 8080:80 --name naas-devops-webapp naas-devops-webapp:latest (Start the container and map port 8080)
