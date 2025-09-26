@@ -1,10 +1,11 @@
 <B>Project structure</B> : 
 
+```
 naas-devops-webapp/
 ├── Dockerfile         # Docker build file
 └── app/
     └── index.html     # Web page served by Nginx
-
+```
 <B>Prerequisites</B> :
 
 Docker :
