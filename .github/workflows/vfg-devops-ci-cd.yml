@@ -1,0 +1,60 @@
+name: CI/CD for DevOps WebApp & VFG Solution
+
+on:
+  push:
+    paths:
+      - 'naas-devops-webapp/**'
+      - 'naas-vfg-solution/**'
+  pull_request:
+    paths:
+      - 'naas-devops-webapp/**'
+      - 'naas-vfg-solution/**'
+
+jobs:
+  devops-webapp:
+    if: contains(github.event.head_commit.message, 'naas-devops-webapp') || startsWith(github.ref, 'refs/heads/main')
+    runs-on: ubuntu-latest
+    name: Build & Test naas-devops-webapp
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install Dependencies
+      run: |
+        cd naas-devops-webapp
+        pip install -r requirements.txt
+
+    - name: Run Tests
+      run: |
+        cd naas-devops-webapp
+        pytest
+
+  vfg-solution:
+    if: contains(github.event.head_commit.message, 'naas-vfg-solution') || startsWith(github.ref, 'refs/heads/main')
+    runs-on: ubuntu-latest
+    name: Build & Test naas-vfg-solution
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install Dependencies
+      run: |
+        cd naas-vfg-solution
+        pip install -r requirements.txt
+
+    - name: Run Tests
+      run: |
+        cd naas-vfg-solution
+        pytest
