@@ -13,7 +13,7 @@ Docker :
 
 <B>A Docker Hub account</B> (https://github.com/)
 
-<B>Build the Docker Image </B>
+<B>Build the Docker Image</B>
 
 Command :  docker build -t naas-devops-webapp:latest .
 
