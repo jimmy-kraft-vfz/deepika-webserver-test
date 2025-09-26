@@ -16,7 +16,7 @@ naas-vfg-solution/
 <B>Prerequisites</B> :
 
 Docker :
- installed on your system.
+ installed on your  system.
 
 <B>A Docker Hub account</B> (https://github.com/)
 
