@@ -15,26 +15,40 @@ jobs:
     if: contains(github.event.head_commit.message, 'naas-devops-webapp') || startsWith(github.ref, 'refs/heads/main')
     runs-on: ubuntu-latest
     name: Build & Test naas-devops-webapp
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        working-directory: naas-devops-webapp
+        run: pip install -r requirements.txt
+
+      - name: Run Tests
+        working-directory: naas-devops-webapp
+        run: pytest
 
   vfg-solution:
     if: contains(github.event.head_commit.message, 'naas-vfg-solution') || startsWith(github.ref, 'refs/heads/main')
     runs-on: ubuntu-latest
     name: Build & Test naas-vfg-solution
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-    - name: Install Dependencies
-      working-directory: naas-vfg-solution
-      run: pip install -r requirements.txt
+      - name: Install Dependencies
+        working-directory: naas-vfg-solution
+        run: pip install -r requirements.txt
 
-    - name: Run Tests
-      run: |
-        cd naas-vfg-solution
-        pytest
+      - name: Run Tests
+        working-directory: naas-vfg-solution
+        run: pytest
