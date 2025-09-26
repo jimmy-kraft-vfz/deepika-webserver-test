@@ -18,7 +18,7 @@ naas-vfg-solution/
 Docker :
  installed on your system.
 
-<B>A Docker Hub account</B> (https://github.com/)
+<B>A Docker Hub account </B> (https://github.com/)
 
 <B>Build the Docker Image </B>
 
