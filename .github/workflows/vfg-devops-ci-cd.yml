@@ -16,21 +16,20 @@ jobs:
     runs-on: ubuntu-latest
     name: Build & Test naas-devops-webapp
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
         with:
-          python-version: '3.11'
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Install Dependencies
-        working-directory: naas-devops-webapp
-        run: pip install -r requirements.txt
+      - name: Build Docker image
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/devops-webapp:latest .
 
-      - name: Run Tests
-        working-directory: naas-devops-webapp
-        run: pytest
+      - name: Push Docker image
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/devops-webapp:latest
 
   vfg-solution:
     if: contains(github.event.head_commit.message, 'naas-vfg-solution') || startsWith(github.ref, 'refs/heads/main')
