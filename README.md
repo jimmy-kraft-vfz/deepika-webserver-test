@@ -1,5 +1,5 @@
 # Deepika Webserver Test
-# Requirements 
+# Prerequisites  
 
 ```
 1- Create End-2-End connectivity for every service to automate! 	
