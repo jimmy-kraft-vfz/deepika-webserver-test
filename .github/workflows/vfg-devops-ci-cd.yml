@@ -26,10 +26,10 @@ jobs:
           password: "SHA256:Oz8R9OyI50kldRoZZUcmxnBpk9tVcnBNyF/05lYs5H8"
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/devops-webapp:latest .
+        run: docker build -t poojadeepika/devops-webapp:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/devops-webapp:latest
+        run: docker push poojadeepika/devops-webapp:latest
 
   vfg-solution:
     if: contains(github.event.head_commit.message, 'naas-vfg-solution') || startsWith(github.ref, 'refs/heads/main')
