@@ -15,7 +15,7 @@ Docker :
 
 <B>Build the Docker Image</B>
 
-Command :  <B> locla :</B> docker build -t naas-devops-webapp:latest . </B>
+Command :  <B> local :</B> docker build -t naas-devops-webapp:latest . </B>
 
 <B>SIT env :</B> docker build -t naas-devops-webapp:sit .
 
