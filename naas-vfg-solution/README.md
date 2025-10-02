@@ -32,9 +32,9 @@ docker build -t deepika-webserver-test:sit .
 docker build -t deepika-webserver-test:uat .
 
 
-Run the Container
+## Run the Container
 
-docker run -d -p 8080:80 --name naas-devops-webserver <deepika-Webserver-Test>:latest
+docker run -d -p 8080:80 --name naas-devops-webserver deepika-webserver-test:local
 
 <B>Open browser and go to:</B>
 
