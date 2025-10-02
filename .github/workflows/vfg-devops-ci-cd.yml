@@ -46,11 +46,8 @@ jobs:
 
       - name: Install Dependencies
         working-directory: naas-vfg-solution
-        run: pip install -r requirements.txt
-        
-      - name: Install dependencies
         run: |
-          pip uninstall -y Flask Werkzeug
+          pip install --upgrade pip
           pip install -r naas-vfg-solution/requirements.txt
 
       - name: Run Tests
