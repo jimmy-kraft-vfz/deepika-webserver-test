@@ -28,7 +28,7 @@ Command :
 docker build -t deepika-webserver-test:local .
 ## sit
 docker build -t deepika-webserver-test:sit .
-##uat
+## uat
 docker build -t deepika-webserver-test:uat .
 
 
