@@ -34,7 +34,7 @@ docker build -t deepika-webserver-test:uat .
 
 ## Run the Container
 
-docker run -d -p 8080:80 --name naas-devops-webserver deepika-webserver-test:local
+docker run -d -p 8080:8080 --name naas-devops-webserver deepika-webserver-test:local
 
 <B>Open browser and go to:</B>
 
