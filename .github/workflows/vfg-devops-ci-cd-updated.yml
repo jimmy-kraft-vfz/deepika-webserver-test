@@ -1,0 +1,55 @@
+name: CI/CD for DevOps WebApp & VFG Solution
+
+on:
+  push:
+    paths:
+      - 'naas-devops-webapp/**'
+      - 'naas-vfg-solution/**'
+  pull_request:
+    paths:
+      - 'naas-devops-webapp/**'
+      - 'naas-vfg-solution/**'
+
+jobs:
+  devops-webapp:
+    if: contains(github.event.head_commit.message, 'naas-devops-webapp') || startsWith(github.ref, 'refs/heads/main')
+    runs-on: ubuntu-latest
+    name: Build & Test naas-devops-webapp
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: "poojadeepika"
+          password: "dckr_pat_RbgoPFHGQjpcLPRL51f0nFM4ySQ"
+
+      - name: Build Docker image
+        run: docker build -t poojadeepika/devops-webapp:latest naas-devops-webapp/
+
+      - name: Push Docker image
+        run: docker push poojadeepika/devops-webapp:latest
+
+  vfg-solution:
+    if: contains(github.event.head_commit.message, 'naas-vfg-solution') || startsWith(github.ref, 'refs/heads/main')
+    runs-on: ubuntu-latest
+    name: Build & Test naas-vfg-solution
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        working-directory: naas-vfg-solution
+        run: |
+          pip install --upgrade pip
+          pip install --force-reinstall -r naas-vfg-solution/requirements.txt
+
+      - name: Run Tests
+        working-directory: naas-vfg-solution
+        run: pytest
