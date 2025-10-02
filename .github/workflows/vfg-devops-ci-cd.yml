@@ -26,7 +26,7 @@ jobs:
           password: "dckr_pat_RbgoPFHGQjpcLPRL51f0nFM4ySQ"
 
       - name: Build Docker image
-        run: docker build -t poojadeepika/devops-webapp:latest .
+        run: docker build -t poojadeepika/devops-webapp:latest naas-devops-webapp/
 
       - name: Push Docker image
         run: docker push poojadeepika/devops-webapp:latest
