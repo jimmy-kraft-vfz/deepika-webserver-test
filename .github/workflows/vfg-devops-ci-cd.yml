@@ -23,7 +23,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: "poojadeepika"
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          password: "dckr_pat_JhQNL4Us3XDAJ5dJ_uZmlORriYU"
 
       - name: Build Docker image
         run: docker build -t poojadeepika/devops-webapp:latest .
