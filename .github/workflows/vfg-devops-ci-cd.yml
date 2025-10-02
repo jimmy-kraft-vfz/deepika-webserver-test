@@ -48,6 +48,8 @@ jobs:
         working-directory: naas-vfg-solution
         run: |
           pip install --upgrade pip
+          pip uninstall -y Flask Werkzeug
+          pip install Flask==2.2.5 Werkzeug==2.2.3
           pip install -r naas-vfg-solution/requirements.txt
 
       - name: Run Tests
