@@ -50,7 +50,7 @@ jobs:
         run: |
           pwd
           pip install --upgrade pip
-          pip install --force-reinstall -r naas-vfg-solution/requirements.txt
+          pip install --force-reinstall -r ./requirements.txt
 
       - name: Run Tests
         working-directory: naas-vfg-solution
