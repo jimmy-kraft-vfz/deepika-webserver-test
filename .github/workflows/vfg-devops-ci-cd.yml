@@ -1,6 +1,7 @@
 name: CI/CD for DevOps WebApp & VFG Solution
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'naas-devops-webapp/**'
