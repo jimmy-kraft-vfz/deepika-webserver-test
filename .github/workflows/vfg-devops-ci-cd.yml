@@ -27,10 +27,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t poojadeepika/devops-webapp:latest naas-devops-webapp/
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/devops-webapp:latest naas-devops-webapp/
 
       - name: Push Docker image
-        run: docker push poojadeepika/devops-webapp:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/devops-webapp:latest
 
   vfg-solution:
     if: contains(github.event.head_commit.message, 'naas-vfg-solution') || startsWith(github.ref, 'refs/heads/main')
